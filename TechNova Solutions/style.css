@@ -13,8 +13,8 @@ body {
 
 
 .header {
-  background: #1e1e2f;
-  color: white;
+  background: white;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@ body {
 }
 .nav a {
   margin-left: 24px;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -38,34 +38,68 @@ body {
 }
 
 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .hero {
-  background: linear-gradient(135deg, #00c9ff, #92fe9d);
-  color: white;
+  position: relative;
+  height: 500px; /* Full screen */
+  background: url('banner.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 80px 32px;
+  color: white;
+  padding: 0 20px;
 }
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 16px;
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
-.hero p {
-  font-size: 19.2px;
-  margin-bottom: 32px;
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
 }
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
 .btn {
+  display: inline-block;
   padding: 12px 24px;
-  background: white;
-  color: #00a896;
-  border: none;
-  border-radius: 25px;
+  background-color: white;
+  color: #008080;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .btn:hover {
-  background: #004e64;
+  background-color: #008080;
   color: white;
 }
+
 
 .features {
   padding: 64px 32px;
