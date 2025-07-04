@@ -37,3 +37,5 @@ project-folder/
 ├── index.html
 ├── style.css
 ├── README.md
+├── bsnner.jpg
+├── favicon_io(1)
